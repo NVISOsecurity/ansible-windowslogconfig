@@ -1,0 +1,264 @@
+- name: Enable auditing for the category "Credential Validation"
+  win_audit_policy_system:
+    subcategory: Credential Validation
+    audit_type: success, failure
+
+- name: Disable auditing for the category "Kerberos Authentication Service"
+  win_audit_policy_system:
+    subcategory: Kerberos Authentication Service
+    audit_type: none
+
+- name: Enable auditing for the category "Kerberos Service Ticket Operations"
+  win_audit_policy_system:
+    subcategory: Kerberos Service Ticket Operations
+    audit_type: none
+
+- name: Enable auditing for the category "Other Account Logon Events"
+  win_audit_policy_system:
+    subcategory: Other Account Logon Events
+    audit_type: success, failure
+
+- name: Disable auditing for the category "Application Group Management"
+  win_audit_policy_system:
+    subcategory: Application Group Management
+    audit_type: none
+
+- name: Enable auditing for the category "Computer Account Management"
+  win_audit_policy_system:
+    subcategory: Computer Account Management
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Distribution Group Management"
+  win_audit_policy_system:
+    subcategory: Distribution Group Management
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Security Group Management"
+  win_audit_policy_system:
+    subcategory: Security Group Management
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Other Account Management Events"
+  win_audit_policy_system:
+    subcategory: Other Account Management Events
+    audit_type: success, failure
+
+- name: Enable auditing for the category "User Account Management"
+  win_audit_policy_system:
+    subcategory: User Account Management
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Process Termination"
+  win_audit_policy_system:
+    subcategory: Process Termination
+    audit_type: success, failure
+
+- name: Disable auditing for the category "DPAPI Activity"
+  win_audit_policy_system:
+    subcategory: DPAPI Activity
+    audit_type: none
+
+- name: Enable auditing for the category "RPC Events"
+  win_audit_policy_system:
+    subcategory: RPC Events
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Process Creation"
+  win_audit_policy_system:
+    subcategory: Process Creation
+    audit_type: success, failure
+
+- name: Disable auditing for the category "Detailed Directory Service Replication"
+  win_audit_policy_system:
+    subcategory: Detailed Directory Service Replication
+    audit_type: none
+
+- name: Disable auditing for the category "Directory Service Access"
+  win_audit_policy_system:
+    subcategory: Directory Service Access
+    audit_type: none
+
+- name: Enable auditing for the category "Directory Service Changes"
+  win_audit_policy_system:
+    subcategory: Directory Service Changes
+    audit_type: success, failure
+
+- name: Disable auditing for the category "Directory Service Replication"
+  win_audit_policy_system:
+    subcategory: Directory Service Changes
+    audit_type: none
+
+- name: Enable auditing for the category "Account Lockout"
+  win_audit_policy_system:
+    subcategory: Account Lockout
+    audit_type: success
+
+- name: Disable auditing for the category "IPsec Extended Mode"
+  win_audit_policy_system:
+    subcategory: IPsec Extended Mode
+    audit_type: none
+
+- name: Disable auditing for the category "IPsec Main Mode"
+  win_audit_policy_system:
+    subcategory: IPsec Main Mode
+    audit_type: none
+
+- name: Disable auditing for the category "IPsec Quick Mode"
+  win_audit_policy_system:
+    subcategory: IPsec Quick Mode
+    audit_type: none
+
+- name: Disable auditing for the category "Logoff"
+  win_audit_policy_system:
+    subcategory: Logoff
+    audit_type: none
+
+- name: Enable auditing for the category "Logon"
+  win_audit_policy_system:
+    subcategory: Logon
+    audit_type: success, failure
+
+- name: Disable auditing for the category "Network Policy Server"
+  win_audit_policy_system:
+    subcategory: Network Policy Server
+    audit_type: none
+
+- name: Enable auditing for the category "Other Logon/Logoff Events"
+  win_audit_policy_system:
+    subcategory: Other Logon/Logoff Events
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Special Logon"
+  win_audit_policy_system:
+    subcategory: Special Logon
+    audit_type: success
+
+- name: Enable auditing for the category "Application Generated"
+  win_audit_policy_system:
+    subcategory: Application Generated
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Certification Services"
+  win_audit_policy_system:
+    subcategory: Certification Services
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Detailed File Share"
+  win_audit_policy_system:
+    subcategory: Detailed File Share
+    audit_type: success
+
+- name: Enable auditing for the category "File Share"
+  win_audit_policy_system:
+    subcategory: File Share
+    audit_type: success, failure
+
+- name: Enable auditing for the category "File System"
+  win_audit_policy_system:
+    subcategory: File System
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Filtering Platform Connection"
+  win_audit_policy_system:
+    subcategory: Filtering Platform Connection
+    audit_type: success
+
+- name: Disable auditing for the category "Filtering Platform Packet Drop"
+  win_audit_policy_system:
+    subcategory: Filtering Platform Connection
+    audit_type: none
+
+- name: Disable auditing for the category "Handle Manipulation"
+  win_audit_policy_system:
+    subcategory: Handle Manipulation
+    audit_type: none
+
+- name: Enable auditing for the category "Kernel Object"
+  win_audit_policy_system:
+    subcategory: Kernel Object
+    audit_type: success, failure
+
+- name: Disable auditing for the category "Other Object Access Events"
+  win_audit_policy_system:
+    subcategory: Other Object Access Events
+    audit_type: none
+
+- name: Enable auditing for the category "Registry"
+  win_audit_policy_system:
+    subcategory: Registry
+    audit_type: success
+
+- name: Enable auditing for the category "Removable Storage"
+  win_audit_policy_system:
+    subcategory: Removable Storage
+    audit_type: success, failure
+
+- name: Disable auditing for the category "SAM"
+  win_audit_policy_system:
+    subcategory: SAM
+    audit_type: none
+
+- name: Enable auditing for the category "Audit Policy Change"
+  win_audit_policy_system:
+    subcategory: Audit Policy Change
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Authentication Policy Change"
+  win_audit_policy_system:
+    subcategory: Authentication Policy Change
+    audit_type: success
+
+- name: Enable auditing for the category "Authorization Policy Change"
+  win_audit_policy_system:
+    subcategory: Authorization Policy Change
+    audit_type: success, failure
+
+- name: Disable auditing for the category "Filtering Platform Policy Change"
+  win_audit_policy_system:
+    subcategory: Filtering Platform Policy Change
+    audit_type: none
+
+- name: Disable auditing for the category "MPSSVC Rule-Level Policy Change"
+  win_audit_policy_system:
+    subcategory: MPSSVC Rule-Level Policy Change
+    audit_type: none
+
+- name: Disable auditing for the category "Other Policy Change Events"
+  win_audit_policy_system:
+    subcategory: Other Policy Change Events
+    audit_type: none
+
+- name: Disable auditing for the category "Other Privilege Use Events"
+  win_audit_policy_system:
+    subcategory: Other Privilege Use Events
+    audit_type: none
+
+- name: Enable auditing for the category "Sensitive Privilege Use"
+  win_audit_policy_system:
+    subcategory: Sensitive Privilege Use
+    audit_type: success, failure
+
+- name: Enable auditing for the category "IPsec Driver"
+  win_audit_policy_system:
+    subcategory: IPsec Driver
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Other System Events"
+  win_audit_policy_system:
+    subcategory: Other System Events
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Security State Change"
+  win_audit_policy_system:
+    subcategory: Security State Change
+    audit_type: success, failure
+
+- name: Enable auditing for the category "Security System Extension"
+  win_audit_policy_system:
+    subcategory: Security System Extension
+    audit_type: success, failure
+
+- name: Enable auditing for the category "System Integrity"
+  win_audit_policy_system:
+    subcategory: System Integrity
+    audit_type: success, failure

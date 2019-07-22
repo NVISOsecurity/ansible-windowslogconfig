@@ -1,0 +1,13 @@
+- name: Set ProcessCreationIncludeCmdLine_Enabled registry key
+  win_regedit:
+    path: HKLM:\software\microsoft\windows\currentversion\policies\system\audit
+    name: ProcessCreationIncludeCmdLine_Enabled
+    data: 1
+    type: dword
+
+- name: Set SCENoApplyLegacyAuditPolicy registry key
+  win_regedit:
+    path: HKLM:\System\CurrentControlSet\Control\Lsa
+    name: SCENoApplyLegacyAuditPolicy
+    data: 1
+    type: dword

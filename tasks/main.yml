@@ -1,0 +1,7 @@
+- include: eventlog.yml
+
+- include: powershell.yml
+
+- include: registry.yml
+
+- include: auditpolicy.yml

@@ -1,0 +1,42 @@
+- name: Set Windows Security log size to 500 MB
+  win_eventlog:
+    name: Security
+    maximum_size: 500MB
+    overflow_action: OverwriteAsNeeded
+    state: present
+
+- name: Set Windows Application log size to 250 MB
+  win_eventlog:
+    name: Application
+    maximum_size: 250MB
+    overflow_action: OverwriteAsNeeded
+    state: present
+
+- name: Set Windows System log size to 250 MB
+  win_eventlog:
+    name: System
+    maximum_size: 250MB
+    overflow_action: OverwriteAsNeeded
+    state: present
+
+- name: Set Windows Powershell log size to 250 MB
+  win_eventlog:
+    name: Windows Powershell
+    maximum_size: 250MB
+    overflow_action: OverwriteAsNeeded
+    state: present
+
+- name: Set Windows Setup log size to 250MB
+  win_command: wevtutil sl Setup /ms:262144000
+
+- name: Set Microsoft-Windows-PowerShell/Operational log size to 500MB
+  win_command: wevtutil sl "Microsoft-Windows-PowerShell/Operational" /ms:524288000
+   
+- name: Set Windows Setup log size to 500MB
+  win_command: wevtutil sl "Microsoft-Windows-Sysmon/Operational" /ms:524288000
+
+- name: Enable Microsoft-Windows-TaskScheduler/Operational log
+  win_command: wevtutil sl "Microsoft-Windows-TaskScheduler/Operational" /e:true
+
+- name: Enable Microsoft-Windows-DNS-Client/Operational log
+  win_command: wevtutil sl "Microsoft-Windows-DNS-Client/Operational" /e:true

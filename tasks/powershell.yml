@@ -1,0 +1,58 @@
+- name: "PowerShell: Set EnableModuleLogging registry key"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging
+    name: EnableModuleLogging
+    data: 1
+    type: dword
+
+- name: "PowerShell Set ScriptBlockLogging registry key"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
+    name: EnableScriptBlockLogging
+    data: 1
+    type: dword
+
+- name: "PowerShell: Set EnableInvocationHeader registry key"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription
+    name: EnableInvocationHeader
+    data: 1
+    type: dword
+
+- name: "PowerShell: Set EnableScriptBlockLogging registry key"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription
+    name: EnableScriptBlockLogging
+    data: 1
+    type: dword
+
+- name: "PowerShell: Set EnableTranscripting registry key"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription
+    name: EnableTranscripting
+    data: 1
+    type: dword
+
+- name: "Create PowerShell transcript folder {{ PoSHTranscript_dir }}"
+  win_file:
+    path: "{{ PoSHTranscript_dir }}"
+    state: directory    
+
+- name: "Remove permissions enheritance on folder {{ PoSHTranscript_dir }}"
+  win_acl_inheritance:
+      path: "{{ PoSHTranscript_dir }}"
+      state: absent
+
+- name: "Set PowerShell transcript folder {{ PoSHTranscript_dir }} rights"
+  win_acl: 
+    user: administrators # required. User or Group to add specified rights to act on src file/folder or registry key.
+    path: "{{ PoSHTranscript_dir }}"
+    type: allow
+    rights: Read,Write,Modify,FullControl,Delete
+
+- name: "PowerShell: Set EnableTranscripting registry key"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription
+    name: OutputDirectory
+    data: "{{ PoSHTranscript_dir }}"
+    type: string
