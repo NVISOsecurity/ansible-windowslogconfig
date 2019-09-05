@@ -32,7 +32,7 @@
 - name: Set Microsoft-Windows-PowerShell/Operational log size to 500MB
   win_command: wevtutil sl "Microsoft-Windows-PowerShell/Operational" /ms:524288000
    
-- name: Set Windows Setup log size to 500MB
+- name: Set Microsoft-Windows-Sysmon/Operational log size to 500MB
   win_command: wevtutil sl "Microsoft-Windows-Sysmon/Operational" /ms:524288000
 
 - name: Enable Microsoft-Windows-TaskScheduler/Operational log
