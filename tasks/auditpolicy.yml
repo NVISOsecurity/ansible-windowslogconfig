@@ -11,7 +11,7 @@
 - name: Enable auditing for the category "Kerberos Service Ticket Operations"
   win_audit_policy_system:
     subcategory: Kerberos Service Ticket Operations
-    audit_type: none
+    audit_type: success, failure
 
 - name: Enable auditing for the category "Other Account Logon Events"
   win_audit_policy_system:
