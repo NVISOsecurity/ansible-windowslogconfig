@@ -262,8 +262,3 @@
   win_audit_policy_system:
     subcategory: System Integrity
     audit_type: success, failure
-
-- name: Enable auditing for the category "Object Access"
-  win_audit_policy_system:
-    subcategory: Object Access
-    audit_type: success, failure
