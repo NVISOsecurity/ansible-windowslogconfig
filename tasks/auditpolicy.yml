@@ -68,25 +68,25 @@
     subcategory: Process Creation
     audit_type: success, failure
 
-- name: Disable auditing for the category "Detailed Directory Service Replication"
+- name: Enable auditing for the category "Detailed Directory Service Replication"
   win_audit_policy_system:
     subcategory: Detailed Directory Service Replication
-    audit_type: none
-
-- name: Disable auditing for the category "Directory Service Access"
+    audit_type: success, failure
+    
+- name: Enable auditing for the category "Directory Service Access"
   win_audit_policy_system:
     subcategory: Directory Service Access
-    audit_type: none
-
+    audit_type: success, failure
+    
 - name: Enable auditing for the category "Directory Service Changes"
   win_audit_policy_system:
     subcategory: Directory Service Changes
     audit_type: success, failure
 
-- name: Disable auditing for the category "Directory Service Replication"
+- name: Enable auditing for the category "Directory Service Replication"
   win_audit_policy_system:
     subcategory: Directory Service Changes
-    audit_type: none
+    audit_type: success, failure
 
 - name: Enable auditing for the category "Account Lockout"
   win_audit_policy_system:
