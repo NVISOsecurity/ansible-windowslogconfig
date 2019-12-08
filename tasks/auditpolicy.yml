@@ -181,7 +181,7 @@
 - name: Disable auditing for the category "Other Object Access Events"
   win_audit_policy_system:
     subcategory: Other Object Access Events
-    audit_type: none
+    audit_type: success, failure
 
 - name: Enable auditing for the category "Registry"
   win_audit_policy_system:
